@@ -24,7 +24,7 @@ public class RegisterOneActivity extends AppCompatActivity {
     LinearLayout btn_back;
 
     EditText username,password,email_address;
-    DatabaseReference reference;
+    DatabaseReference reference,reference2;
 
     String USERNAME_KEY = "usernamekey";
     String usernamekey = "";
@@ -58,22 +58,39 @@ public class RegisterOneActivity extends AppCompatActivity {
                 btn_continue.setEnabled(false);
                 btn_continue.setText("Loading...");
 
-                //Menyimpan data pada local storage / session
-                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(usernamekey,username.getText().toString());
-                editor.apply();
-
-
-                //save to daatabase
-                reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username.getText().toString());
-                reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                //check username existed or not in database,using username as the key
+                reference2 = FirebaseDatabase.getInstance().getReference().child("Users").child(username.getText().toString());
+                reference2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        dataSnapshot.getRef().child("username").setValue(username.getText().toString());
-                        dataSnapshot.getRef().child("password").setValue(password.getText().toString());
-                        dataSnapshot.getRef().child("email_database").setValue(email_address.getText().toString());
-                        dataSnapshot.getRef().child("user_balance").setValue(1000);
+                        //if data ada
+                        if (dataSnapshot.exists()){
+                            Toast.makeText(getApplicationContext(),"Username Existed, use diferrent username",Toast.LENGTH_SHORT).show();
+                        } else  {
+                            //Menyimpan data pada local storage / session
+                            SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString(usernamekey,username.getText().toString());
+                            editor.apply();
+
+
+                            //save to daatabase
+                            reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username.getText().toString());
+                            reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    dataSnapshot.getRef().child("username").setValue(username.getText().toString());
+                                    dataSnapshot.getRef().child("password").setValue(password.getText().toString());
+                                    dataSnapshot.getRef().child("email_database").setValue(email_address.getText().toString());
+                                    dataSnapshot.getRef().child("user_balance").setValue(1000);
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+                        }
                     }
 
                     @Override
@@ -81,6 +98,8 @@ public class RegisterOneActivity extends AppCompatActivity {
 
                     }
                 });
+
+
 
 //                //notif when username has been added
 //                Toast.makeText(getApplicationContext(),"Username " + username.getText().toString(),Toast.LENGTH_SHORT).show();
