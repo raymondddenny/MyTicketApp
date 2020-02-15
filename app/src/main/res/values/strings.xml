@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MyTicketApp</string>
+    <string name="welcoming_words">Let\'s start yout journey!</string>
+    <string name="btn_signin">Sign In</string>
+    <string name="btn_register">NEW ACCOUNT</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="email_label">Email</string>
+    <string name="name_label">Name</string>
+    <string name="bio_label">Your Passion?</string>
+    <string name="explore">Explore Now</string>
+    <string name="myProfile_label">My Profile</string>
+    <string name="myProfile_description">Explore the beauty of world</string>
+    <string name="ticket_dest">Menara Pisa</string>
+    <string name="dest_address">Pisa Italy, Italy</string>
+    <string name="btn_edit_profile">Edit Profile</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="my_ticket_details">Ticket Details</string>
+    <string name="date_info">Date</string>
+    <string name="date_details">January 22, 2020</string>
+    <string name="time_info">Time</string>
+    <string name="time_details">10AM to 12PM</string>
+    <string name="info_details">Information</string>
+    <string name="info_description">Anak yang berumur lebih dari 3 tahun  wajib membeli tiket untuk masuk  kedalam landmark</string>
+    <string name="refund_now">Refund Now</string>
+    <string name="txt_editprofile">Edit Profile</string>
+    <string name="txt_editprofile_info">We highly suggest you to  \nuse the correct informations</string>
+    <string name="txt_bio">Bio</string>
+    <string name="txt_username">Username</string>
+    <string name="txxt_password">Password</string>
+    <string name="txt_saveprofile">Save Profle</string>
+    <string name="ticket_tips_label">Ticket Tips</string>
+    <string name="ticket_tips_info">Learn it for many benefits</string>
+    <string name="txt_location_ticket">Pisa, Italy</string>
+    <string name="ticket_info">Information</string>
+    <string name="txt_photo_details">4 Photo Spots</string>
+    <string name="txt_photo_details_info">Tripod everywhere</string>
+    <string name="txt_wifi_detail">WiFi Available</string>
+    <string name="txt_wifi_detail_info">Connect for any tourist</string>
+    <string name="txt_festival_detail">13 Festivals</string>
+    <string name="txt_festival_detail_info">Dance and Foods</string>
+    <string name="txt_ticket_detail_description_naration">The leaning of the Tower of Pisa \ncomes into the story in 1173, when \nconstruction began.</string>
+    <string name="ticket_information">Information</string>
+    <string name="ticket_fyi">Knowing before travel</string>
+
+</resources>

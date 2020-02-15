@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "510695888315",
+    "firebase_url": "https://myticketapp-f303e.firebaseio.com",
+    "project_id": "myticketapp-f303e",
+    "storage_bucket": "myticketapp-f303e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510695888315:android:f117d6b2240059e8a2e09e",
+        "android_client_info": {
+          "package_name": "com.ticketapp.myticketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510695888315-dreehfc73rc71eodehurs0lj1s7l13mn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ticketapp.myticketapp",
+            "certificate_hash": "76e2c922296d785ff5c9b1db4d1516b6dfc467ba"
+          }
+        },
+        {
+          "client_id": "510695888315-58dh47d5b55558ora84cku0b78ufmuok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8UL6AP9R8q0u8SC0cPjrVoKUngYY7Tjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510695888315-58dh47d5b55558ora84cku0b78ufmuok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
