@@ -46,7 +46,7 @@ public class RegisterOneActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterOneActivity.this,LoginActivity.class));
+                onBackPressed();
             }
         });
 

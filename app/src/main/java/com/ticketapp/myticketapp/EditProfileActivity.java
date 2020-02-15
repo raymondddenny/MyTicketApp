@@ -1,5 +1,6 @@
 package com.ticketapp.myticketapp;
 
+import androidx.activity.OnBackPressedDispatcherOwner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,8 +62,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_back)
     public void gotomyprofile(){
-        Intent gotomyprofile = new Intent(this,MyProfileActivity.class);
-        startActivity(gotomyprofile);
+        onBackPressed();
     }
 
     @OnClick(R.id.btn_save_edit_profile)

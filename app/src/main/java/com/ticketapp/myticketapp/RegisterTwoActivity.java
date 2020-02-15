@@ -112,7 +112,7 @@ public class RegisterTwoActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterTwoActivity.this,RegisterOneActivity.class));
+                onBackPressed();
             }
         });
     }
