@@ -31,34 +31,22 @@
         android:id="@+id/view5"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bg_view_circle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
 
-    <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/btn_my_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view3">
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-        <ImageView
-            android:id="@+id/photo_profile"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:src="@drawable/icon_nopic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </com.github.florent37.shapeofview.shapes.CircleView>
 
     <TextView
         android:id="@+id/fullname"
@@ -192,7 +180,6 @@
                 android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
